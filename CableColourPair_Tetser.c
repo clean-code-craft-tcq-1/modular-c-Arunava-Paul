@@ -11,7 +11,7 @@ void Fc_testNumberToPair(int pairNumber_int, enum MajorColor_ten expectedMajor_e
 {
 	ColorPair_tst colorPair_st = Fc_GetColorFromPairNumber(pairNumber_int);
 	char colorPairNames_ch[MAX_COLORPAIR_NAME_CHARS];
-	ColorPairToString(&colorPair_st, colorPairNames_ch);
+	Fc_ColorPairToString(&colorPair_st, colorPairNames_ch);
 	printf("Got pair %s\n", colorPairNames_ch);
 	assert(colorPair_st.majorColor_en == expectedMajor_en);
 	assert(colorPair_st.minorColor_en == expectedMinor_en);

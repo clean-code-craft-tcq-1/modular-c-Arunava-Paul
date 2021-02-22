@@ -10,6 +10,9 @@
 #include "CablePairTester_CommonCfg.h"
 #include "CablePairNumber_Tetser.h"
 
+extern int numberOfMajorColors_int;
+extern int numberOfMinorColors_int;
+
 /*************************************************
  * Des: This function will fetch and print tha pair number. Also it will validate the test case
  * In : major --> MajorColor enum variable

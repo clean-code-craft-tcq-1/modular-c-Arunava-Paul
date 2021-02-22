@@ -7,6 +7,7 @@
 
 
 #include <stdio.h>
+#include "CablePairTester_CommonCfg.h"
 #include "CablePairNumber_Tetser.h"
 #include "CableColourPair_Tetser.h"
 

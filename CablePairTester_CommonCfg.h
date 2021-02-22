@@ -14,14 +14,17 @@
 /************
  * Colour Pair as per standard
  ************/
-const int MAX_COLORPAIR_NAME_CHARS = 16;
 
 enum MajorColor_ten {WHITE, RED, BLACK, YELLOW, VIOLET};
 enum MinorColor_ten {BLUE, ORANGE, GREEN, BROWN, SLATE};
-const char* MajorColorNames[] = { "White", "Red", "Black", "Yellow", "Violet" };
-const char* MinorColorNames[] = { "Blue", "Orange", "Green", "Brown", "Slate" };
 
 /*************************************/
+
+extern int numberOfMajorColors_int;
+extern int numberOfMinorColors_int;
+extern const char* MajorColorNames[];
+extern const char* MinorColorNames[];
+extern const int MAX_COLORPAIR_NAME_CHARS;
 
 int numberOfMajorColors_int = sizeof(MajorColorNames) / sizeof(MajorColorNames[0]);
 int numberOfMinorColors_int = sizeof(MinorColorNames) / sizeof(MinorColorNames[0]);

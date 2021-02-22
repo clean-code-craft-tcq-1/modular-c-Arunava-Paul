@@ -20,10 +20,10 @@ void Fc_testPairToNumber(enum MajorColor_ten major_en, enum MinorColor_ten minor
     int pairNumber_int = Fc_GetPairNumberFromColor(&colorPair_st);
     printf("Got pair number %d\n", pairNumber_int);
     assert(pairNumber_int == expectedPairNumber_int);
-}
+}/*end of void Fc_testPairToNumber*/
 
 int Fc_GetPairNumberFromColor(const ColorPair_tst* colorPair_st)
 {
     return colorPair_st->majorColor_en * numberOfMinorColors_int +
     		colorPair_st->minorColor_en + 1;
-}
+}/*end of int Fc_GetPairNumberFromColor*/

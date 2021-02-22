@@ -6,7 +6,7 @@
  */
 
 
-#include <CablePairTester_CommonCfg.h>
+#include "CablePairTester_CommonCfg.h"
 
 /**************
  * Description : This will create string of the passed colour pairs

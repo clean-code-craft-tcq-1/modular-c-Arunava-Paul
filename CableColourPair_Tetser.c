@@ -24,4 +24,4 @@ ColorPair_tst Fc_GetColorFromPairNumber(int pairNumber_int)
     colorPair_st.majorColor_en = (enum MajorColor_ten)(zeroBasedPairNumber_int / numberOfMinorColors_int);
     colorPair_st.minorColor_en = (enum MinorColor_ten)(zeroBasedPairNumber_int % numberOfMinorColors_int);
     return colorPair_st;
-};
+}

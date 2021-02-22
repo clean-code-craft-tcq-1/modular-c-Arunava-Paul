@@ -6,7 +6,7 @@
  */
 
 
-#include <CablePairTester_CommonCfg.h>
+#include "CablePairTester_CommonCfg.h"
 
 /********************
  *

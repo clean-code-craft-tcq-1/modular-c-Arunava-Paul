@@ -15,10 +15,10 @@
  *
  * OUT: None
  */
-void Fc_ColorPairToString(const ColorPair* colorPair, char* buffer)
+void Fc_ColorPairToString(const ColorPair_tst* colorPair_st, char* buffer)
 {
 	sprintf( buffer, "%s %s", 							\
-			 MajorColorNames[colorPair->majorColor], 	\
-			 MinorColorNames[colorPair->minorColor] 	\
+			 MajorColorNames[colorPair_st->majorColor_en], 	\
+			 MinorColorNames[colorPair_st->minorColor_en] 	\
 		   );
 }/*end of Fc_ColorPairToString*/

@@ -9,7 +9,7 @@
 #define CABLEPAIRNUMBER_TETSER_H_
 
 
-void Fc_testPairToNumber(enum MajorColor_ten major_en, enum MinorColor_ten minor_en, int expectedPairNumber_int);
-int Fc_GetPairNumberFromColor(const ColorPair_tst* colorPair_st);
+extern void Fc_testPairToNumber(enum MajorColor_ten major_en, enum MinorColor_ten minor_en, int expectedPairNumber_int);
+extern int Fc_GetPairNumberFromColor(const ColorPair_tst* colorPair_st);
 
 #endif /* CABLEPAIRNUMBER_TETSER_H_ */

@@ -8,6 +8,7 @@
 #include <stdio.h>
 #include <assert.h>
 #include "CablePairNumber_Tetser.h"
+#include "CablePairTester_CommonCfg.h"
 /*************************************************
  * Des: This function will fetch and print tha pair number. Also it will validate the test case
  * In : major --> MajorColor enum variable

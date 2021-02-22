@@ -4,7 +4,7 @@
  *  Created on: Feb 22, 2021
  *      Author: PUL1KOR
  */
-#include <CablePairTester_CommonCfg.h>
+#include "CablePairTester_CommonCfg.h"
 /*************************************************
  * Des: This function will fetch and print tha pair number. Also it will validate the test case
  * In : major --> MajorColor enum variable

@@ -5,7 +5,7 @@
  *      Author: PUL1KOR
  */
 
-#include <CablePairTester_CommonCfg.h>
+#include "CablePairTester_CommonCfg.h"
 
 void Fc_testNumberToPair(int pairNumber_int, enum MajorColor_ten expectedMajor_en, enum MinorColor_ten expectedMinor_en)
 {

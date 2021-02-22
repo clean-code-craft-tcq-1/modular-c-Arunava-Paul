@@ -7,8 +7,9 @@
 
 #include <stdio.h>
 #include <assert.h>
-#include "CableColourPair_Tetser.h"
 #include "CablePairTester_CommonCfg.h"
+#include "CableColourPair_Tetser.h"
+
 
 extern const int MAX_COLORPAIR_NAME_CHARS;
 extern int numberOfMajorColors_int;

@@ -26,9 +26,6 @@ typedef struct {
 } ColorPair_tst;
 
 void Fc_ColorPairToString(const ColorPair_tst* colorPair_st, char* buffer);
-void Fc_testNumberToPair(int pairNumber_int, enum MajorColor_ten expectedMajor_en, enum MinorColor_ten expectedMinor_en);
-ColorPair_tst Fc_GetColorFromPairNumber(int pairNumber_int);
-void Fc_testPairToNumber(enum MajorColor_ten major_en, enum MinorColor_ten minor_en, int expectedPairNumber_int);
-int Fc_GetPairNumberFromColor(const ColorPair_tst* colorPair_st);
+
 
 #endif /* CABLEPAIRTESTER_COMMONCFG_H_ */

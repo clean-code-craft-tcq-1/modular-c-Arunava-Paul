@@ -11,6 +11,8 @@
 #include "CablePairTester_CommonCfg.h"
 
 extern const int MAX_COLORPAIR_NAME_CHARS;
+extern int numberOfMajorColors_int;
+extern int numberOfMinorColors_int;
 
 void Fc_testNumberToPair(int pairNumber_int, enum MajorColor_ten expectedMajor_en, enum MinorColor_ten expectedMinor_en)
 {

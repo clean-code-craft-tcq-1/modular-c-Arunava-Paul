@@ -31,5 +31,7 @@ int main()
     Fc_testNumberToPair(5, WHITE, SLATE);
     Fc_testPairToNumber(BLACK, ORANGE, 12);
     Fc_testPairToNumber(VIOLET, SLATE, 25);
+	int c;
+	scanf("%d",&c);
     return 0;
 }

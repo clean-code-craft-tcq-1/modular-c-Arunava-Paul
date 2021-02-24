@@ -22,7 +22,7 @@ extern int numberOfMinorColors_int;
 
 void Fc_testPairToNumber(void)
 {
-	int pairNumber_int = 0xFF ,MjC_ref_int = 0xFF ,MnC_ref_int = 0xFF,expectedMajor_int,expectedMinor_int;
+	int pairNumber_int = 0xFF ,MjC_ref_int = 0xFF ,MnC_ref_int = 0xFF;
 	/************************************USER Inputs********************************************************/
 	Fc_UserInput_Handler(&pairNumber_int, &MjC_ref_int ,&MnC_ref_int);
 	/********************************System Calculation*********************************************************/

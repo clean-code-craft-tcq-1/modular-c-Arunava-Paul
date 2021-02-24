@@ -43,7 +43,7 @@ void Fc_Reference_Table(void)
 	for(idx = 1 ; idx <= numberOfMajorColors_int ; idx++)
 	{
 		colorPair_st = Fc_GetColorFromPairNumber(idx);
-		printf("%d           %s              %s \n", idx ,MajorColorNames[colorPair_st->majorColor_en],MinorColorNames[colorPair_st->minorColor_en] );
+		printf("%d           %s              %s \n", idx ,MajorColorNames[colorPair_st.majorColor_en],MinorColorNames[colorPair_st.minorColor_en] );
 	}
 	printf("*******End of Reference Table ********** \n");
 }/*end of Fc_Reference_Table*/

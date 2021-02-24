@@ -29,9 +29,9 @@ void Fc_testPairToNumber(void)
 	ColorPair_tst colorPair_st;
 	colorPair_st.majorColor_en = MjC_ref_int - MAJOR_COLOUR_REFERENCE_NO_OFFSET;
 	colorPair_st.minorColor_en = MnC_ref_int - MINOR_COLOUR_REFERENCE_NO_OFFSET;
-	int pairNumber_int = Fc_GetPairNumberFromColor(&colorPair_st);
-	printf("Got pair number %d\n", pairNumber_int);
-	assert(pairNumber_int == pairNumber_int);
+	int CalculatedPairNumber_int = Fc_GetPairNumberFromColor(&colorPair_st);
+	printf("Got pair number %d\n", CalculatedPairNumber_int);
+	assert(CalculatedPairNumber_int == pairNumber_int);
 }/*end of void Fc_testPairToNumber*/
 
 int Fc_GetPairNumberFromColor(const ColorPair_tst* colorPair_st)

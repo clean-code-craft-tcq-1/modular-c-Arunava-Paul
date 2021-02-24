@@ -31,7 +31,6 @@ int main()
 void Fc_Test_pairCombo(void)
 {
 	char key_ip;
-	int MjC_int,MnC_int,Pair;
 	printf("---Cable pair tester--\n\n To test the pair number to Colour combo press 'a' , To test the colour combo to pair number press 'b'\n\n ");
 	while(!((key_ip== 'a') || (key_ip== 'b')))
 			scanf("%c",&key_ip);/*Scan the character until the user press correct data*/

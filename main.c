@@ -1,78 +1,47 @@
+/*
+ * main.c
+ *  Created on: Feb 22, 2021
+ *      Author: PUL1KOR
+ */
 #include <stdio.h>
-#include <assert.h>
-
-enum MajorColor {WHITE, RED, BLACK, YELLOW, VIOLET};
-enum MinorColor {BLUE, ORANGE, GREEN, BROWN, SLATE};
-
-const char* MajorColorNames[] = {
-    "White", "Red", "Black", "Yellow", "Violet"
-};
-int numberOfMajorColors =
-    sizeof(MajorColorNames) / sizeof(MajorColorNames[0]);
-const char* MinorColorNames[] = {
-    "Blue", "Orange", "Green", "Brown", "Slate"
-};
-const int MAX_COLORPAIR_NAME_CHARS = 16;
-int numberOfMinorColors =
-    sizeof(MinorColorNames) / sizeof(MinorColorNames[0]);
-
-typedef struct {
-    enum MajorColor majorColor;
-    enum MinorColor minorColor;
-} ColorPair;
-
-void ColorPairToString(const ColorPair* colorPair, char* buffer) {
-    sprintf(buffer, "%s %s",
-        MajorColorNames[colorPair->majorColor],
-        MinorColorNames[colorPair->minorColor]);
-}
-
-ColorPair GetColorFromPairNumber(int pairNumber) {
-    ColorPair colorPair;
-    int zeroBasedPairNumber = pairNumber - 1;
-    colorPair.majorColor = 
-        (enum MajorColor)(zeroBasedPairNumber / numberOfMinorColors);
-    colorPair.minorColor =
-        (enum MinorColor)(zeroBasedPairNumber % numberOfMinorColors);
-    return colorPair;
-}
-
-int GetPairNumberFromColor(const ColorPair* colorPair) {
-    return colorPair->majorColor * numberOfMinorColors +
-            colorPair->minorColor + 1;
-}
-
-void testNumberToPair(int pairNumber,
-    enum MajorColor expectedMajor,
-    enum MinorColor expectedMinor)
+#include "CablePairTester_CommonCfg.h"
+#include "CablePairNumber_Tester.h"
+#include "CableColourPair_Tester.h"
+/********************
+ * Des: Main function. This will call the Colour pair testing functions.
+ * Input : None
+ * Output: None
+ */
+int main()
 {
-    ColorPair colorPair = GetColorFromPairNumber(pairNumber);
-    char colorPairNames[MAX_COLORPAIR_NAME_CHARS];
-    ColorPairToString(&colorPair, colorPairNames);
-    printf("Got pair %s\n", colorPairNames);
-    assert(colorPair.majorColor == expectedMajor);
-    assert(colorPair.minorColor == expectedMinor);
-}
-
-void testPairToNumber(
-    enum MajorColor major,
-    enum MinorColor minor,
-    int expectedPairNumber)
-{
-    ColorPair colorPair;
-    colorPair.majorColor = major;
-    colorPair.minorColor = minor;
-    int pairNumber = GetPairNumberFromColor(&colorPair);
-    printf("Got pair number %d\n", pairNumber);
-    assert(pairNumber == expectedPairNumber);
-}
-
-int main() {
-    testNumberToPair(4, WHITE, BROWN);
-    testNumberToPair(5, WHITE, SLATE);
-
-    testPairToNumber(BLACK, ORANGE, 12);
-    testPairToNumber(VIOLET, SLATE, 25);
-
+	char key_ip;
+	printf("-------Telecom Cable pair tester code---------\n\n"
+			"available major colours :  WHITE, RED, BLACK, YELLOW, VIOLET \n available minor colours :  BLUE, ORANGE, GREEN, BROWN, SLATE\n"
+			"For reference table press 'a' otherwise to test combination press 'b'\n\n ");
+#if(USER_INPUT_MODE_ACTIVALED == TRUE)
+	while(!((key_ip== 'a') || (key_ip== 'b')))
+		scanf("%c",&key_ip);/*Scan the character until the user press correct data*/
+	key_ip == 'a'? Fc_Reference_Table():Fc_Test_pairCombo();
+#else
+	/**Since Github does not support SCANF run manual function calling has been configured**/
+	Fc_Reference_Table();
+	Fc_Test_pairCombo();
+#endif
     return 0;
-}
+}/*end of main*/
+
+/*This function will trigger the pair no to colour or colour to pair tester function**/
+void Fc_Test_pairCombo(void)
+{
+	char key_ip;
+	printf("---Cable pair tester--\n\n To test the pair number to Colour combo press 'a' , To test the colour combo to pair number press 'b'\n\n ");
+#if(USER_INPUT_MODE_ACTIVALED == TRUE)
+	while(!((key_ip== 'a') || (key_ip== 'b')))
+			scanf("%c",&key_ip);/*Scan the character until the user press correct data*/
+	printf("Please ");
+	key_ip == 'a'? Fc_testPairToNumber():Fc_testNumberToPair();
+#else
+	Fc_testPairToNumber();
+	Fc_testNumberToPair();
+#endif
+}/*end of Fc_Test_pairCombo*/

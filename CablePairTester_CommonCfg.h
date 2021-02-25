@@ -23,6 +23,10 @@ enum MinorColor_ten {BLUE=0, ORANGE, GREEN, BROWN, SLATE};
 #define MINOR_COLOUR_REFERENCE_NO_OFFSET 6
 /*************************************/
 
+#define TRUE 	1
+#define FALSE 	0
+#define USER_INPUT_MODE_ACTIVALED  FALSE
+
 typedef struct {
     enum MajorColor_ten majorColor_en;
     enum MinorColor_ten minorColor_en;

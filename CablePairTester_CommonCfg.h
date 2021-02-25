@@ -35,6 +35,6 @@ typedef struct {
 void Fc_ColorPairToString(const ColorPair_tst* colorPair_st, char* buffer);
 void Fc_Reference_Table(void);
 void Fc_Test_pairCombo(void);
-void Fc_UserInput_Handler(int *cable_pair_no,int *major_colour_en_no,int *minor_colour_en_no );
+void Fc_UserInput_Handler(int *cable_pair_no,int *major_colour_en_no,int *minor_colour_en_no,int choice_int );
 extern ColorPair_tst Fc_GetColorFromPairNumber(int pairNumber_int);
 #endif /* CABLEPAIRTESTER_COMMONCFG_H_ */

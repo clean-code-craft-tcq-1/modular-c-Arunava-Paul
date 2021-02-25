@@ -18,7 +18,7 @@ void Fc_testNumberToPair(void)
 	int pairNumber_int = 0xFF ,MjC_ref_int = 0xFF ,MnC_ref_int = 0xFF;
 	char colorPairNames_ch[MAX_COLORPAIR_NAME_CHARS];
 	/************************************USER Inputs********************************************************/
-	Fc_UserInput_Handler(&pairNumber_int, &MjC_ref_int ,&MnC_ref_int);
+	Fc_UserInput_Handler(&pairNumber_int, &MjC_ref_int ,&MnC_ref_int,1);
     /********************************System Calculation*********************************************************/
 	ColorPair_tst colorPair_st = Fc_GetColorFromPairNumber(pairNumber_int); /*Get the colour combo from the pair number*/
 	Fc_ColorPairToString(&colorPair_st, colorPairNames_ch);/*Coverting into string*/

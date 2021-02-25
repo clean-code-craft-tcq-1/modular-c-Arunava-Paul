@@ -24,7 +24,7 @@ void Fc_testPairToNumber(void)
 {
 	int pairNumber_int = 0xFF ,MjC_ref_int = 0xFF ,MnC_ref_int = 0xFF;
 	/************************************USER Inputs********************************************************/
-	Fc_UserInput_Handler(&pairNumber_int, &MjC_ref_int ,&MnC_ref_int);
+	Fc_UserInput_Handler(&pairNumber_int, &MjC_ref_int ,&MnC_ref_int,3);
 	/********************************System Calculation*********************************************************/
 	ColorPair_tst colorPair_st;
 	colorPair_st.majorColor_en = MjC_ref_int - MAJOR_COLOUR_REFERENCE_NO_OFFSET;
